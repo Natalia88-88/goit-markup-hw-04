@@ -133,11 +133,14 @@ ul {
   align-items: center;
   flex-direction: column;
   gap: 48px;
-  background: #2e2f42;
+
   padding-top: 188px;
   padding-bottom: 188px;
   padding-left: 0;
   padding-right: 0;
+  background: #2e2f42;
+  background-image: url(images/people-office.jpg);
+  background: rgba(46, 47, 66, 0.7);
 }
 
 .title {
@@ -263,7 +266,7 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 32px 0;
+  padding: 32px 0 0 0;
 }
 
 .team-block .paragraph {
@@ -279,15 +282,43 @@ ul {
   column-gap: 24px;
   row-gap: 48px;
   flex-shrink: 1;
-  /* padding: 32px 16px; */
 }
 
 .portfolio-ul-li {
   flex-basis: calc((100% - 48px) / 3);
+  position: relative;
 }
 
-.img-cont {
-  display: block;
+.box {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translatey(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.box:hover .overlay {
+  transform: translatey(0);
+}
+
+.overlay p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  background: #4d5ae5;
+  width: 360px;
+  height: 300px;
+  padding: 40px 32px 164px 32px;
 }
 
 .portfolio-block {
@@ -303,6 +334,7 @@ ul {
 /* Section Portfolio end */
 
 .footer {
+  display: flex;
   background: #2e2f42;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -327,4 +359,50 @@ ul {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
+}
+
+/* SVG sprite start*/
+.advant-icon-blok {
+  background: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  gap: 24px;
+  height: 112px;
+  padding: 24px 100px;
+  margin-bottom: 8px;
+}
+
+.social-blok {
+  display: flex;
+  margin-top: 8px;
+  margin-bottom: 32px;
+  margin-left: 16px;
+  gap: 24px;
+}
+
+.link {
+  border-radius: 50%;
+  padding: 12px;
+  background-color: #4d5ae5;
+  height: 40px;
+  width: 40px;
+}
+.link:hover {
+  background-color: #31d0aa;
+}
+
+/* SVG sprite  end */
+
+.social-blok .media {
+  display: flex;
+  width: 208px;
+  height: 80px;
+}
+
+.p-social {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
 }
