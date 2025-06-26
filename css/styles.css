@@ -41,8 +41,15 @@ ul {
 }
 
 .header {
+  background-color: #fff;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
   border-bottom: 1px solid #e7e9fc;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
+
 .header-nav {
   display: flex;
   align-items: center;
@@ -83,8 +90,22 @@ ul {
   text-decoration: none;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-li-link.current {
+  position: relative;
 }
 
+.nav-li-link.current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+}
 .nav-li {
   margin-right: 40px;
 }
@@ -95,7 +116,8 @@ ul {
 
 .nav-li-link:hover,
 .nav-li:focus,
-.nav-li:active {
+.nav-li:active,
+.nav-li-link.current {
   color: #404bbf;
 }
 
@@ -119,6 +141,7 @@ ul {
   color: #434455;
   text-decoration: none;
   margin-right: 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .email-tel:hover,
@@ -133,14 +156,20 @@ ul {
   align-items: center;
   flex-direction: column;
   gap: 48px;
-
   padding-top: 188px;
   padding-bottom: 188px;
   padding-left: 0;
   padding-right: 0;
-  background: #2e2f42;
-  background-image: url(images/people-office.jpg);
-  background: rgba(46, 47, 66, 0.7);
+  max-width: 1440px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title {
@@ -207,7 +236,6 @@ ul {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-  /* padding-top: 120px; */
   margin-bottom: 72px;
 }
 
@@ -215,9 +243,22 @@ ul {
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
-  row-gap: 48px;
+  /* row-gap: 48px; */
   gap: 24px;
 }
+
+.advant-icon-blok {
+  display: flex;
+  background: #f4f4fd;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  gap: 24px;
+  height: 112px;
+  padding-left: 100px;
+  padding-top: 24px;
+  margin-bottom: 8px;
+}
+
 .advant-ul-li {
   flex-basis: calc((100% - 72px) / 4);
 }
@@ -288,6 +329,10 @@ ul {
   flex-basis: calc((100% - 48px) / 3);
   position: relative;
 }
+.portfolio-ul-li:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 
 .box {
   position: relative;
@@ -333,18 +378,24 @@ ul {
 
 /* Section Portfolio end */
 
+/* Footer start */
+
 .footer {
-  display: flex;
   background: #2e2f42;
   padding-top: 100px;
   padding-bottom: 100px;
 }
 
-.footer .logo {
-  display: inline-block;
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.logo {
   color: #4d5ae5;
   text-transform: uppercase;
   margin-bottom: 16px;
+  padding-bottom: 16px;
+  flex-direction: column;
 }
 
 .footer .accent-logo {
@@ -360,41 +411,9 @@ ul {
   color: #f4f4fd;
   max-width: 264px;
 }
-
-/* SVG sprite start*/
-.advant-icon-blok {
-  background: #f4f4fd;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  gap: 24px;
-  height: 112px;
-  padding: 24px 100px;
-  margin-bottom: 8px;
-}
-
-.social-blok {
+*/ .media {
   display: flex;
-  margin-top: 8px;
-  margin-bottom: 32px;
-  margin-left: 16px;
-  gap: 24px;
-}
-
-.link {
-  border-radius: 50%;
-  padding: 12px;
-  background-color: #4d5ae5;
-  height: 40px;
-  width: 40px;
-}
-.link:hover {
-  background-color: #31d0aa;
-}
-
-/* SVG sprite  end */
-
-.social-blok .media {
-  display: flex;
+  flex-direction: column;
   width: 208px;
   height: 80px;
 }
@@ -406,3 +425,42 @@ ul {
   letter-spacing: 0.02em;
   color: #fff;
 }
+*/
+
+/*  Footer end */
+
+
+
+
+
+
+
+.social-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+.social-blok {
+  display: flex;
+  margin: 0 auto;
+  height: 41px;
+  gap: 24px;
+}
+.social-blok-link {
+  display: flex;
+}
+
+.link {
+  border-radius: 50%;
+  padding: 12px;
+  background-color: #4d5ae5;
+  height: 40px;
+}
+.link:hover {
+  background-color: #31d0aa;
+}
+
+/* SVG sprite  end */
