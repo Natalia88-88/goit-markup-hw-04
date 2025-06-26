@@ -393,8 +393,7 @@ ul {
 }
 
 .footer-box {
-  display: flex;
-  flex-direction: column;
+  margin-right: 120px;
 }
 .logo {
   color: #4d5ae5;
@@ -437,6 +436,10 @@ ul {
   gap: 24px;
 }
 
+.social-blok.footer-blok {
+  gap: 16px;
+}
+
 /* social media links  */
 
 .social-blok-link {
@@ -448,6 +451,10 @@ ul {
   padding: 12px;
   background-color: #4d5ae5;
   height: 40px;
+}
+
+.footer-link {
+  padding: 8px;
 }
 .link:hover {
   background-color: #31d0aa;
