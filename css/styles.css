@@ -485,9 +485,9 @@ ul {
   background-color: #404bbf;
 }
 
-/* .footer-social-icon {
-  background-color: #f4f4fd;
-} */
+.footer-social-icon {
+  fill: #f4f4fd;
+}
 
 .footer-link:hover,
 .footer-link:focus {
