@@ -92,7 +92,7 @@ ul {
   text-decoration: none;
   padding-top: 24px;
   padding-bottom: 24px;
-  /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-li-link.current {
   position: relative;
@@ -143,6 +143,7 @@ ul {
   color: #434455;
   text-decoration: none;
   margin-right: 0;
+  transition: color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .email-tel:hover,
@@ -382,19 +383,17 @@ ul {
 
 .footer {
   display: flex;
-  align-items: baseline;
-
   background-color: #2e2f42;
   padding-top: 100px;
   padding-bottom: 100px;
-  margin-left: 0;
+  justify-content: start;
 }
 
 .footer-div {
   display: flex;
+  align-items: baseline;
   gap: 120px;
   justify-content: start;
-  margin-right: 120px;
 }
 
 .logo {
@@ -435,7 +434,7 @@ ul {
 .social-blok {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 24px;
   padding-top: 8px;
 }
 
@@ -443,6 +442,15 @@ ul {
   display: flex;
   width: 40px;
   height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon {
+  fill: #f4f4fd;
+}
+
+.social-blok.footer-blok {
+  gap: 16px;
 }
 
 .link {
@@ -469,14 +477,15 @@ ul {
 
 .link:hover,
 .link:focus {
-  fill: #404bbf;
+  background-color: #404bbf;
 }
 
-.footer-social-icon {
-  fill: #f4f4fd;
-}
+/* .footer-social-icon {
+  background-color: #f4f4fd;
+} */
 
-.footer-link:hover {
+.footer-link:hover,
+.footer-link:focus {
   background-color: #31d0aa;
 }
 
