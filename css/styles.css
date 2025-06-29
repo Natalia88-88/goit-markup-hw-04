@@ -126,7 +126,8 @@ ul {
 .address-ul {
   display: flex;
   gap: 40px;
-  transition: color cubic-bezier(0.4, 0, 0.2, 1);
+
+  align-items: center;
 }
 
 .address {
@@ -144,7 +145,7 @@ ul {
   color: #434455;
   text-decoration: none;
   margin-right: 0;
-  /* transition: color cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .email-tel:hover,
