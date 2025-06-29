@@ -20,6 +20,7 @@ ul {
 }
 
 .container {
+  width: 100%;
   max-width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
@@ -277,6 +278,7 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-top: 8px;
 }
 
 .paragraph {
@@ -285,7 +287,7 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  padding: 8px 0 0 0;
+  margin-top: 8px;
 }
 
 /* Section Advanteges end */
@@ -388,7 +390,6 @@ ul {
   background-color: #2e2f42;
   padding-top: 100px;
   padding-bottom: 100px;
-  justify-content: start;
 }
 
 .footer-box {
@@ -398,36 +399,36 @@ ul {
 .footer-div {
   display: flex;
   align-items: baseline;
-  justify-content: start;
+  align-self: flex-start;
 }
 
-.logo {
+.footer-logo {
+  display: inline-block;
   color: #4d5ae5;
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .footer .accent-logo {
   color: #f4f4fd;
 }
 
-.footer-paragraph {
+.footer-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
   max-width: 264px;
   font-weight: 500;
-  margin-bottom: 16px;
 }
 
-.media-footer {
+.footer-media {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  margin-bottom: 32px;
 }
 
-.paragraph-social {
+.footer-social-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -440,14 +441,13 @@ ul {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-top: 8px;
+  margin-top: 8px;
 }
 
 .social-blok-link {
   display: flex;
   width: 40px;
   height: 40px;
-  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .social-icon {
@@ -461,7 +461,6 @@ ul {
 .link {
   display: flex;
   border-radius: 50%;
-  padding: 12px;
   background-color: #4d5ae5;
   width: 100%;
   height: 100%;
